@@ -58,6 +58,11 @@ app.use(express.json({ limit: '10mb' }));
 
 setupSwagger(app);
 
+// ========== HEALTH CHECK ENDPOINT (para Render) ==========
+app.get('/healthz', (req, res) => {
+  res.status(200).send('OK');
+});
+
 app.use('/api/auth', authRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/products', productRoutes);
@@ -70,13 +75,13 @@ app.get('/api/healthcheck', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString(), service: 'Extreme Gear Shop' });
 });
 
-app.use(express.static(path.join(__dirname, '../client/build')));
-
-app.get('*', (req, res) => {
-  if (!req.path.startsWith('/api')) {
-    res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
-  }
-});
+// ========== REMOVIDO: bloco de estática do frontend ==========
+// app.use(express.static(path.join(__dirname, '../client/build')));
+// app.get('*', (req, res) => {
+//   if (!req.path.startsWith('/api')) {
+//     res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+//   }
+// });
 
 io.on('connection', (socket) => {
   console.log('🔌 Novo cliente conectado');
