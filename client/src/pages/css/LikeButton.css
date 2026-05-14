@@ -1,0 +1,46 @@
+.like-button-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.like-btn {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.like-icon {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.45);
+  transition: color 0.3s;
+}
+
+.like-icon.liked {
+  color: #ff4d4f;
+}
+
+.like-btn:hover .like-icon {
+  color: #ff4d4f;
+}
+
+.like-count-badge .ant-badge-count {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0 0 1px #d9d9d9 inset;
+}
+
+.liked + .like-count-badge .ant-badge-count {
+  color: #ff4d4f;
+  box-shadow: 0 0 0 1px #ff4d4f inset;
+}
+
+.error-text {
+  color: #ff4d4f;
+  font-size: 12px;
+  margin-top: 4px;
+}

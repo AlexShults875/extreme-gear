@@ -1,0 +1,131 @@
+.user-profile-page {
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+.profile-banner {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #1a1a1a 100%);
+  padding: 60px var(--container-padding);
+  color: white;
+  margin-bottom: 0;
+}
+
+.profile-header-content {
+  max-width: 1400px;
+  margin: 0 auto !important;
+}
+
+.user-main-avatar {
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  box-shadow: var(--shadow);
+  background-color: var(--accent-color);
+}
+
+.profile-banner h2 {
+  color: white !important;
+  margin-bottom: 12px !important;
+  font-size: 2.5rem !important;
+  font-weight: 900 !important;
+  text-transform: uppercase;
+}
+
+.profile-banner .ant-typography {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.stat-mini-card {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: var(--border-radius);
+}
+
+.stat-mini-card .ant-statistic-title,
+.stat-mini-card .ant-statistic-content {
+  color: white !important;
+}
+
+.profile-main-tabs {
+  margin-top: -32px;
+  background: transparent;
+}
+
+.profile-main-tabs .ant-tabs-nav {
+  background: var(--card-bg);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  max-width: 1400px;
+  margin: 0 auto !important;
+  border: 1px solid var(--border-color);
+  border-bottom: none;
+}
+
+.inventory-grid {
+  max-width: 1400px;
+  margin: 32px auto;
+  padding: 0 20px;
+}
+
+.user-item-card {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.user-item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+  border-color: var(--accent-color);
+}
+
+.user-item-card img {
+  height: 200px;
+  object-fit: cover;
+  background: #f0f0f0;
+}
+
+.settings-container {
+  max-width: 1200px;
+  margin: 40px auto !important;
+  padding: 0 20px;
+}
+
+.settings-card {
+  border-radius: var(--border-radius);
+  margin-bottom: 24px;
+  border: 1px solid var(--border-color);
+}
+
+.setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.settings-card.danger {
+  border-top: 4px solid #ff4d4f;
+}
+
+.dark .profile-banner {
+  background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+}
+
+.dark .user-item-card img {
+  background: #111;
+}
+
+@media (max-width: 768px) {
+  .profile-banner {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .profile-quick-stats {
+    margin-top: 24px;
+  }
+
+  .profile-main-tabs {
+    margin-top: 0;
+  }
+}
