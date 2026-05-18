@@ -65,7 +65,7 @@ export const AuthProvider = ({ children }) => {
         const initAuth = async () => {
             try {
                 const response = await axios.post('/api/auth/refresh', {}, {
-                    baseURL: 'http://localhost:5000',
+                    baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5000',
                     withCredentials: true
                 });
                 if (response.data?.token) {
